@@ -9,11 +9,13 @@ from random import choice
 stage = a0
 
 
-def send(script: str):
+def send(script: str, s: tuple):
 
     "**********************************************"
-    account_sid = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-    auth_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    # account_sid = "AC17fbb6fe6a08882d01aa028302fe614e"
+    # auth_token = "7ab5a0fb5c2843b4badb01e6724f51a7"
+    account_sid = "ACce8cd2852068bbb3ab8daa99ef2efb09"
+    auth_token = "8daeba5da3b59d808690b9b0905cf312"
     "***********************************************"
     client = Client(account_sid, auth_token)
 
@@ -21,15 +23,24 @@ def send(script: str):
     # add that equal to client... if this doesn't work
 
     "*****************************"
-    client.messages.create(
-        body=script,
-        from_="+xxxxxxxxxxxxxx",
-        to="+xxxxxxxxxxxxx"
-    )
+    if len(s) == 3:
+        client.messages.create(
+            body=script,
+            from_="+17792090819",
+            to="+15147958168"
+        )
+    
+    elif len(s) == 4:
+        client.messages.create(
+            media_url=s[3],
+            body=script,
+            from_="+17792090819",
+            to="+15147958168"
+        )
     "******************************"
 
 def judge(answer: str, st: list):
-    co = cohere.Client('xxxxxxxxxxxxxxxxxxxxxx')
+    co = cohere.Client('Bl6g74gBTNtvElVSo3387cHcCIEGWs7N26k35UHN')
     response = co.classify(
         model='large',
         inputs=[str(answer) + "."],
@@ -54,7 +65,7 @@ def display_stats(stats: dict):
     for k in stats:
         word += f"{k}: {stats[k]}   "
 
-    send(script=word[:-1])
+    send(script=word[:-1], s=stage)
 
 
 def clear_stats(stats: dict):
@@ -79,7 +90,7 @@ def incoming_sms():
         stage = a0
         inventory = []
         clear_stats(character)
-        send(script=stage[0])
+        send(script=stage[0], s=stage)
 
     # elif stage == 1:
     #     send(script="Sending you back to the beginning... ")
@@ -99,28 +110,26 @@ def incoming_sms():
         if effects[3]:
             inventory.append(effects[3][0])
 
-        send(script=stage[1][int(code)][0])
+        send(script=stage[1][int(code)][0], s=stage)
 
         stage = stage[1][int(code)][1]
 
         if stage == 1:
-            send(script="Sending you back to the beginning... ")
+            send(script="Sending you back to the beginning... ", s=stage)
             inventory = []
             clear_stats(character)
             stage = a0
-            send(stage[0])
+            send(stage[0], s=stage)
 
         else:
             stage = stage[1][int(code)][1]
-            send(script=stage[0])
+            send(script=stage[0], s=stage)
 
     else:
         display_stats(character)
-        send(script=f"{choice(still_here)} Write 'restart' to start a new game!")
+        send(script=f"{choice(still_here)} Write 'restart' to start a new game!", s=stage)
 
 
 if __name__ == "__main__":
-    send(script=stage[0])
+    send(script=stage[0], s=stage)
     app.run(port=80, debug=True)
-
-
