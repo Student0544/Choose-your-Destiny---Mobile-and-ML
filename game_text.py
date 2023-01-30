@@ -17,15 +17,15 @@ still_here = ["What are you still doing here? The game is over!", "Dude you ain'
 #            "That clearly has absolutely no way to happen! Think again! ", ":|, maybe an answer related to the story... "]
 
 content = """a0:
-It’s the middle of the night. You finished your training and can finally make it out of Ivory City. The moon lights the night for your escape. You grab your satchel and look around the family pawn shop for items to take. Something that is easy to carry and useful for your indefinite adventure. There are some COINS on the table, and an OIL PAINTING on the wall. What do you take?
+The moon lights the night of your escape from the dreadful Ivory City. You grab your satchel and scour the family pawn shop for items. There are some COINS on the table, and an OIL PAINTING on the wall. What do you take?
 
 
 a0:1
-You sweep the silver and gold bullions into your bag, but drop a few on the floor. You hear rustling upstairs from your parents.
+You sweep the gold bullions into your bag, dropping a few on the floor.
 
 
 a0:2
-You walk to the kitchen and pull the oil painting from the wall with a clang and stuff it into your bag. You did physical strength training for a reason. You hear your parents’ footsteps upstairs.
+You walk to the kitchen and pull the oil painting from the wall with a clang and stuff it into your bag.
 
 
 a0:3
@@ -33,67 +33,67 @@ Let’s not be greedy. Your stealing would’ve certainly woken up your family.
 
 
 a1:
-It’s time to go. If your parents catch you they will pawn you off to the King! You hurry out the door and run through the garden leading to the gates of the city.   There is a CLIMBABLE wall keeping you in but you might be able to BREAK THROUGH with just your body weight. What will you do?
+It’s time to go. If your parents catch you they will pawn you off to the King! You hurry out the door and encounter a CLIMBABLE wall but you might be able to BREAK THROUGH with just your body weight. What will you do?
 
 
 a1:1
-You bust through the wall with CRASH and emerge from the rubble.
+You bust through the wall and emerge from the rubble. 
 
 
 a2:
-You caught the attention of the archers atop the watchtowers. They aim their quiver at you. There is a stretch of land before a FOREST ahead and a patch of BUSHES leading to a river where you can hide.  What will you do?
+You notice the archers atop the watchtowers aiming their quiver at you. There is a stretch of land before a FOREST and some BUSHES leading to a river where you can hide.  What will you do?
 
 
 a2:1 fridge
-You make a break for the forest and you hear the arrow flying behind you. It pierces through your satchel, breaking the strap and hits the painting. The bag and supplies tumble to the ground, but with the alleviated load, you sprint into the forest.
+You run towards the forest and feel an arrow pierce through your satchel, breaking the strap and hits the painting. The bag and supplies tumble to the ground, and with the alleviated load, you make it.
 
 
 a2:1 coins
-You make a break for the forest and you hear the arrow flying behind you. You’re running as fast as you can, but with the weight of the bag, you are pierced through the heart and die instantly.
+You run towards the forest and you hear the arrow behind you. You’re running as fast as you can, but with the weight of the bag, you are pierced through the heart and die instantly.
 
 
 a2:1 nothing
-You make a break for the forest and you hear the arrow flying behind you. You are just fast enough to hear the arrows hit the floor behind you and you make it to the forest.
+You run towards the forest just fast enough to hear the arrows hit the floor behind you, and you make it.
 
 
 a2:2
-You scramble into the bushes. Arrows fall around you as you shuffle your way to the river. You roll into the river and swim in the direction of the forest. In your panic, you drown in the river.
+You scramble into the bushes. Arrows fall around you as you shuffle your way to the river. You roll into the river, but in your panic, you drown in the river.
 
 
 a1:2
 You find your footing between the imperfect tiles and make your way to the top of the tower.
 
 
-b2
-As you stand up, you notice watchtowers. You could probably FIGHT them off or JUMP off on the other side.  What will you do?
+b2:
+As you stand up, you notice watchtowers. You could probably FIGHT them off or CLIMB down the other side.  What will you do?
 
 
 b2:1
-You tumble into the watchtower and throw the archers over the wall. You load their bows and aim at the archers in the other towers.
+You grab the archers and throw them over the wall. You aim their bows at the archers in the other towers.
 
 
 b3:
-Before you SHOOT, one of them pleads to be SPARED. He says the city doctor’s visits are too expensive now that he has a child. What will you do?
+Before you SHOOT, one of them pleads to be SPARED. He is already in crippling medical debt. What will you do?
 
 
 b3:1
-You already threw two people over the wall, what is two more? You mercifully aim for the heart. You grab the bow and quivers and climb down the wall and head to the forest.
+You already threw two people over the wall anyways, so you snipe the rest of them. You grab the quiver and climb down the wall, heading to the forest.
 
 
 b3:2
-You pick up a piece of rubble and throw it at their heads, gently knocking them out. We can’t be too trusting after all You grab the bow and quivers and climb down the wall and head to the forest.
+You pick up a piece of rubble and throw it at their heads, gently knocking them out to be safe. You grab the quiver and climb down the wall, heading to the forest.
 
 
 b2:2
-You decide to climb down the wall on the other side. In your panic, your hands slip and you fall to your DEATH.
+You decide to climb down the wall on the other side. In your panic, your hands slip and you fall to your death.
 
 
 a4
-The forest may be mysterious, but it is the shortest path between the Ivory and Ink Cities. You’ve been walking for almost a day, and begin to get hungry.  You see some pale mushrooms and hear rustling in the bushes. An edible MUSHROOM or a CRITTER could sustain you for a few extra days. What will you do?
+The forest may be mysterious, but it is the shortest path between the Ivory and Ink Cities. You’ve been walking for almost a day, and begin to get hungry. You see some mushrooms and hear rustling in the bushes. An edible MUSHROOM or a CRITTER is the sustenance you need. What will you do?
 
 
 a6:1
-You walk towards the noise and uncover the bushes to a rabbit trapped in some bramble.
+You walk towards the noise and uncover the bushes to a rabbit trapped in some bramble. 
 
 
 a7:
@@ -105,15 +105,16 @@ You take the arrow from your quiver and stab the rabbit. It dies immediately. Yo
 
 
 A7:1
-You reach gently for the feeble critter and [discreetly] kill it. You feast on its flesh.
+You reach gently for the feeble critter and [discreetly] kill it. You feast on its flesh. 
 
 
 a7:2
-You decide against eating the rabbit. It probably won’t taste good raw anyways. You turn around to see some apples on the floor that had probably baited the rabbit initially. These should sustain you for a while longer.
+You decide against eating the rabbit. You turn around to see some apples that had probably baited the rabbit. These should sustain you for a while longer.
 
 
 a7:3
-You loosen the bramble with your hands and the rabbit springs away. It runs towards some apples you hadn’t noticed. You pick up the apples.
+You loosen the bramble with your hands and the rabbit runs away, towards some apples you hadn’t noticed. You pick up the apples.
+
 
 
 A6:2: yes careful
@@ -284,11 +285,11 @@ c12 = (allLines[54],
 
 c11 = (allLines[52],
       {1:{True:(allLines[53], c12, [], []), False:(allLines[57], None, [], [])}[character["Strong"] < 3],
-      2:{True:(allLines[58], None, [], []), False:(allLines[59], 1, [], [])}[character["Strong"] > 3]},
+      2:{True:(allLines[58], None, [], []), False:(allLines[59], 1, [], [], "https://github.com/Student0544/Choose-your-Destiny---Mobile-and-ML/blob/main/c112%20false.png?raw=true")}[character["Strong"] > 3]},
        [Example("Accept.", "1"), Example("Do not accept.", "1"), Example("Decline.", "2"), Example("I do not decline.", "1"), Example("Yes.", "1"), Example("No","2"), Example("abcdefghijklmnopqrstuvwxyz.", "2"), Example(".", "2"), Example("I accept the drinking challenge.", "1"), Example("Drink.", "1"), Example("I drink with the King.", "1"), Example("I do not drink.", "2")])
 
 b11 = (allLines[45],
-      {1:{True:(allLines[46], 1, [], []), False:(allLines[47], None, [], [])}[character["Courageous"] < 3],
+      {1:{True:(allLines[46], 1, [], [], "https://github.com/Student0544/Choose-your-Destiny---Mobile-and-ML/blob/main/a92.png?raw=true"), False:(allLines[47], None, [], [])}[character["Courageous"] < 3],
       2:(allLines[49], None, [], [])},
       [Example("Yes.", "1"), Example("No.", "2"), Example("I try it.", "1"), Example("I do not try it.", "2"), Example("qwertyuiopasdfghjklzxcvbnm.", "2"), Example("Leave.", "2"), Example("I do not drink the soup", "2"), Example("I drink the soup.", "1"), Example(".", "2"), Example("Ok.", "1"), Example("I eat the soup.", "1"), Example("I do not eat the soup.", "2")])
 
@@ -304,7 +305,7 @@ a10 = (allLines[37],
 
 a9 = (allLines[33],
      {1:{True:(allLines[34], a10, ["Adventurous", "Courageous", "Strong", "Rash"], []), False: (allLines[35], a10, ["Adventurous", "Courageous", "Strong", "Rash"], [])}[character["Strong"] > character["Careful"]],
-      2:(allLines[36], 1, [], [])},
+      2:(allLines[36], 1, [], [], "https://github.com/Student0544/Choose-your-Destiny---Mobile-and-ML/blob/main/a92.png?raw=true")},
       [Example("qwertyuiopasdfghjklzxcvbnm.", "2"), Example(".", "2"), Example("Fight.", "1"), Example("Run.", "2"), Example("I do not fight.", "2"), Example("I do not run.", "1"), Example("I run away.", "2"), Example("Flee.", "2"), Example("Battle.", "1"), Example("Throw rocks.", "1"), Example("I punch the giant.", "1"), Example("I hit the giant.", "1")]
      )
 
@@ -333,7 +334,7 @@ b3 = (allLines[14],
 
 b2 = (allLines[12],
       {1:(allLines[13], b3, ["Courageous", "Rash", "Adventurous"], []),
-      2:(allLines[17], 1, [], [])},
+      2:(allLines[17], 1, [], [], "https://github.com/Student0544/Choose-your-Destiny---Mobile-and-ML/blob/main/b22.png?raw=true")},
      [Example("climb down.", "2"), Example("fight.", "1"), Example("I fight.", "1"), Example("I do not fight.", "2"), Example("I climb down.", "2"), Example("I do not climb down.", "1"), Example("I go down.", "2"), Example("I do not go down.", "1"), Example("I battle.", "1"), Example("I attack.", "1"), Example("I do not attack.", "2"), Example("I do not battle.", "2"), Example("climb jump down jump off.", "2"), Example("battle fight attack.", "1")])
 
 a2 = (allLines[6],
