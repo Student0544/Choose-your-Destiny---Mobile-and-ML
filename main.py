@@ -9,13 +9,11 @@ from random import choice
 stage = a0
 
 
-def send(script: str, s: tuple):
+def send(script: str):
 
     "**********************************************"
-    # account_sid = "AC17fbb6fe6a08882d01aa028302fe614e"
-    # auth_token = "7ab5a0fb5c2843b4badb01e6724f51a7"
-    account_sid = "ACce8cd2852068bbb3ab8daa99ef2efb09"
-    auth_token = "8daeba5da3b59d808690b9b0905cf312"
+    account_sid = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    auth_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     "***********************************************"
     client = Client(account_sid, auth_token)
 
@@ -23,24 +21,30 @@ def send(script: str, s: tuple):
     # add that equal to client... if this doesn't work
 
     "*****************************"
-    if len(s) == 3:
-        client.messages.create(
-            body=script,
-            from_="+17792090819",
-            to="+15147958168"
-        )
-    
-    elif len(s) == 4:
-        client.messages.create(
-            media_url=s[3],
-            body=script,
-            from_="+17792090819",
-            to="+15147958168"
-        )
+    client.messages.create(
+        body=script,
+        from_="+xxxxxxxxxxx",
+        to="+xxxxxxxxxxxx"
+    )
+
+
     "******************************"
 
+
+def send_image(url):
+    account_sid = "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    auth_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    client = Client(account_sid, auth_token)
+
+    client.messages.create(
+        media_url=url,
+        from_="+xxxxxxxxxx",
+        to="+1xxxxxxxxxx"
+    )
+
+
 def judge(answer: str, st: list):
-    co = cohere.Client('Bl6g74gBTNtvElVSo3387cHcCIEGWs7N26k35UHN')
+    co = cohere.Client('xxxxxxxxxxxxxxxxxxxxxxxxxx')
     response = co.classify(
         model='large',
         inputs=[str(answer) + "."],
@@ -65,7 +69,7 @@ def display_stats(stats: dict):
     for k in stats:
         word += f"{k}: {stats[k]}   "
 
-    send(script=word[:-1], s=stage)
+    send(script=word[:-1])
 
 
 def clear_stats(stats: dict):
@@ -90,7 +94,8 @@ def incoming_sms():
         stage = a0
         inventory = []
         clear_stats(character)
-        send(script=stage[0], s=stage)
+        send_image("https://github.com/Student0544/Choose-your-Destiny---Mobile-and-ML/blob/main/Poster.png?raw=true")
+        send(script=stage[0])
 
     # elif stage == 1:
     #     send(script="Sending you back to the beginning... ")
@@ -110,26 +115,31 @@ def incoming_sms():
         if effects[3]:
             inventory.append(effects[3][0])
 
-        send(script=stage[1][int(code)][0], s=stage)
+        if len(stage[1][int(code)]) == 5:
+            send_image(stage[1][int(code)][4])
+
+        send(script=stage[1][int(code)][0])
 
         stage = stage[1][int(code)][1]
 
         if stage == 1:
-            send(script="Sending you back to the beginning... ", s=stage)
+            send(script="Sending you back to the beginning... ")
             inventory = []
             clear_stats(character)
             stage = a0
-            send(stage[0], s=stage)
+            send_image("https://github.com/Student0544/Choose-your-Destiny---Mobile-and-ML/blob/main/Poster.png?raw=true")
+            send(stage[0])
 
         else:
             stage = stage[1][int(code)][1]
-            send(script=stage[0], s=stage)
+            send(script=stage[0])
 
     else:
         display_stats(character)
-        send(script=f"{choice(still_here)} Write 'restart' to start a new game!", s=stage)
+        send(script=f"{choice(still_here)} Write 'restart' to start a new game!")
 
 
 if __name__ == "__main__":
-    send(script=stage[0], s=stage)
+    send_image("https://github.com/Student0544/Choose-your-Destiny---Mobile-and-ML/blob/main/Poster.png?raw=true")
+    send(script=stage[0])
     app.run(port=80, debug=True)
